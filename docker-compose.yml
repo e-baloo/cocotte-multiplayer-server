@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   server:
     build: .
@@ -7,3 +5,10 @@ services:
     ports:
       - "5555:5555"
     restart: unless-stopped
+
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
