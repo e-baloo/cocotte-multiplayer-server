@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  server:
+    build: .
+    container_name: cocotte-server
+    ports:
+      - "5555:5555"
+    restart: unless-stopped
